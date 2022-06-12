@@ -1,0 +1,96 @@
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App {
+  background-color: #282c34;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+  /* height: 100vh; */
+  color: white;
+}
+
+.Container {
+  width: 100%;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-grow: false;
+}
+
+.Scene {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  background-color: aqua;
+}
+
+.Back-sun {
+  position: absolute;
+  bottom: -80px;
+  display: flex;
+  
+}
+
+.Stairs {
+  position: absolute;
+  bottom: 0;
+}
+
+.Menu-1 {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+}
+
+.Menu-2 {
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.Menu-3 {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+.Menu-4 {
+  position: absolute;
+  bottom: -50px;
+  right: 50px;
+}
+
+.Logo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Desk {
+  position: absolute;
+  bottom: 60px
+}
+
+.Icon-block {
+  background-color: #e9afaf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 6px;
+  padding: 6px;
+  gap: 6px;
+}
