@@ -12,7 +12,6 @@ export function BackSun({
   useEffect(() => {
     const interval = setInterval(() => {
       setIsLightColored(isColored => !isColored);
-      console.log('là encore')
     }, 1000)
 
     return () => clearTimeout(interval);

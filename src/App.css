@@ -27,6 +27,7 @@
   width: 100%;
   justify-content: space-between;
   flex-grow: false;
+  z-index: 5;
 }
 
 .Scene {
@@ -34,12 +35,11 @@
   position: relative;
   justify-content: center;
   height: 100%;
-  background-color: aqua;
 }
 
 .Back-sun {
   position: absolute;
-  bottom: -80px;
+  bottom: -160px;
   display: flex;
   
 }
@@ -58,19 +58,19 @@
 .Menu-2 {
   position: absolute;
   bottom: -50px;
-  left: 20px;
+  left: 120px;
 }
 
 .Menu-3 {
   position: absolute;
   bottom: -50px;
-  right: 0;
+  right: 120px;
 }
 
 .Menu-4 {
   position: absolute;
   bottom: -50px;
-  right: 50px;
+  right: 0;
 }
 
 .Logo {
@@ -85,12 +85,27 @@
 }
 
 .Icon-block {
-  background-color: #e9afaf;
+  background-color: #5b5c60;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   border-radius: 6px;
   padding: 6px;
-  gap: 6px;
+  gap: 12px;
+  height: fit-content;
+}
+
+.Icon-animation {
+  animation: ring 0.1s forwards;
+}
+
+@keyframes ring {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(15deg);
+  }
 }

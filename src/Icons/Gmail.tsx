@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface GmailProps {
   size: number;
@@ -9,8 +9,19 @@ export function Gmail({
   size,
   color
 }: GmailProps) {
+  const [isIconHovered, setIsIconHovered] = useState<boolean>(false);
+
   return (
-    <svg width={size} height={size} version="1.1" viewBox="0 0 10.164 7.6159" xmlns="http://www.w3.org/2000/svg">
+    <svg 
+      className={`Gmail ${isIconHovered ? 'Icon-animation' : ''}`} 
+      width={size} 
+      height={size}
+      onMouseEnter={() => setIsIconHovered(true)}
+      onMouseLeave={() => setIsIconHovered(false)} 
+      version="1.1" 
+      viewBox="0 0 10.164 7.6159" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g transform="translate(-432.34 -285.13)">
         <g transform="matrix(.04799 0 0 .04799 409.94 313.16)">
           <path d="m478.17-425.79c-2.8846-0.55188-6.2236-2.579-8.2753-5.0241-1.3574-1.6176-2.6506-4.437-2.997-6.5337-0.20896-1.265-0.27212-16.724-0.22019-53.891l0.0729-63.144 48.052 36.048v92.849l-17.672-0.0296c-9.7196-0.0163-18.252-0.14053-18.96-0.27609zm152.06-40.541v-51.873l48.184-36.145-5e-3 63.392c-4e-3 44.418-0.0621 52.637-0.3837 54.154-1.1157 5.2659-5.6629 9.8141-10.928 10.93-1.4481 0.30692-5.1313 0.38005-19.329 0.38378l-17.54 5e-3z" fill={color} strokeWidth=".26478"/>
